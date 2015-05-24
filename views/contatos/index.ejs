@@ -1,7 +1,9 @@
 <% include ../header %>
+<% include ../exit %>
 
   <header>
     <h2>Ntalk - Agenda de contatos</h2>
+    <h2>Bem-vindo, <%- usuario.nome %> (<%- usuario.email%>)</h2>
   </header>
   <section>
 
@@ -30,6 +32,7 @@
             <td><%- contato.email %></td>
             <td>
               <a href="/contato/<%- index %>">Detalhes</a>
+              <a href="/chat/<%- contato.email %>">Conversar</a>
             </td>
           </tr>
 
@@ -39,7 +42,5 @@
     </table>
 
   </section>
-
-<% include ../exit %>
 
 <% include ../footer %>
