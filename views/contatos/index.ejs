@@ -7,7 +7,6 @@
   </header>
   <section>
 
-
     <form action="/contato" method="post">
       <input type="text" name="contato[nome]" placeholder="Nome" />
       <input type="text" name="contato[email]" placeholder="E-mail" />
@@ -20,6 +19,7 @@
         <tr>
           <th>Nome</th>
           <th>Email</th>
+          <th>Status</th>
           <th>Acão</th>
         </tr>
       </thead>
@@ -30,6 +30,7 @@
           <tr>
             <td><%- contato.nome %></td>
             <td><%- contato.email %></td>
+            <td><span id="notify_<%- contato.email %>">Offline</span></td>  
             <td>
               <a href="/contato/<%- index %>">Detalhes</a>
               <a href="/chat/<%- contato.email %>" id="chat_<%- contato.email %>"> Conversar </a>       
